@@ -5,14 +5,26 @@
   display: grid;
   place-items: center;
   height: var(--container-height);
-  margin-top: 3vw;
+  opacity: 0;
+
+  //  Animations
+  &-enter {
+    opacity: 0;
+  }
+  &-enter-active {
+    opacity: 1;
+    transition: all 300ms ease-out;
+  }
+  &-enter-done {
+    opacity: 1;
+  }
 
   @media only screen and (min-width: 48em) {
     --container-height: 28.75rem;
   }
 
   @media only screen and (min-width: 64em) {
-    --container-height: 36.625rem;
+    --container-height: 41.25rem;
   }
 
   &__planet {
@@ -25,7 +37,8 @@
     width: 7rem;
     top: 50%;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%) scale(0.5);
+    transform-origin: center top;
 
     @media only screen and (min-width: 48em) {
       width: 10.5rem;
@@ -33,6 +46,18 @@
 
     @media only screen and (min-width: 64em) {
       top: 60%;
+    }
+
+    //  Animations
+    &-enter {
+      transform: translateX(-50%) scale(0.5);
+    }
+    &-enter-active {
+      transform: translateX(-50%) scale(1);
+      transition: all 300ms cubic-bezier(0.56, 1.165, 0.845, 1.155);
+    }
+    &-enter-done {
+      transform: translateX(-50%) scale(1);
     }
   }
 }

@@ -142,10 +142,11 @@ a {
 // Main Grid
 
 .main-grid {
+  flex-grow: 1;
   width: min(100% - 3rem, 69.375rem);
   margin-inline: auto;
   display: grid;
-  gap: 1.5rem;
+  gap: 2rem;
   grid-template-areas:
     "tabs"
     "img"
@@ -179,6 +180,7 @@ a {
 
 .image-container {
   grid-area: img;
+  align-self: end;
 }
 .tab-container {
   grid-area: tabs;
