@@ -1,0 +1,37 @@
+.image-container {
+  --container-height: 18.75rem;
+
+  position: relative;
+  display: grid;
+  place-items: center;
+  height: var(--container-height);
+
+  @media only screen and (min-width: 48em) {
+    --container-height: 28.75rem;
+  }
+
+  @media only screen and (min-width: 64em) {
+    --container-height: 41.625rem;
+  }
+
+  &__planet {
+    width: calc(var(--container-height) * var(--height, 1));
+    aspect-ratio: 1;
+  }
+
+  &__bubble {
+    position: absolute;
+    width: 7rem;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @media only screen and (min-width: 48em) {
+      width: 10.5rem;
+    }
+
+    @media only screen and (min-width: 64em) {
+      top: 60%;
+    }
+  }
+}

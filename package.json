@@ -1,0 +1,29 @@
+{
+  "name": "planet-facts",
+  "homepage": "https://crsimpson5.github.io/planet-facts",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host",
+    "build": "vite build",
+    "deploy": "vite build && gh-pages -d build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "animated-number-react": "^0.1.2",
+    "classnames": "^2.3.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.3.0",
+    "react-transition-group": "^4.4.5"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.17",
+    "@types/react-dom": "^18.0.6",
+    "@vitejs/plugin-react": "^2.0.1",
+    "gh-pages": "^4.0.0",
+    "sass": "^1.54.5",
+    "vite": "^3.0.7"
+  }
+}

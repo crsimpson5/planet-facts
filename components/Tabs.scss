@@ -1,0 +1,45 @@
+.tab-container {
+  @media only screen and (max-width: 47.9375em) {
+    border-bottom: 1px solid hsl(0 100% 100% / 0.2);
+    padding-inline: 1.5rem;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.tab {
+  position: relative;
+  color: var(--gray-400);
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.175em;
+  padding-block: 1.375em;
+
+  @media only screen and (max-width: 47.9375em) {
+    &.active {
+      color: var(--white);
+    }
+
+    &.active::after {
+      content: "";
+      position: absolute;
+      inset: auto 0 0 0;
+      height: 0.25rem;
+      background-color: var(--color);
+    }
+  }
+
+  @media only screen and (min-width: 48em) {
+    &[data-type="structure"]::before {
+      content: "Internal ";
+    }
+
+    &[data-type="geology"]::after {
+      content: " Geology";
+    }
+  }
+}
