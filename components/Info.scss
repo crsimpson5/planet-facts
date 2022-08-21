@@ -1,0 +1,44 @@
+.info {
+  text-align: center;
+
+  @media only screen and (min-width: 48em) {
+    text-align: left;
+  }
+
+  &__heading {
+    line-height: 1;
+    font-family: var(--ff-serif);
+    font-weight: 500;
+    font-size: clamp(2.5rem, calc(1.62rem + 3.76vw), 5rem);
+    text-transform: uppercase;
+  }
+
+  &__content {
+    margin-block: 1.5rem 2.5rem;
+    color: var(--gray-200);
+
+    @media only screen and (max-width: 47.9375em) {
+      max-width: 50ch;
+      margin-inline: auto;
+    }
+
+    @media only screen and (min-width: 48em) {
+      margin-block: 2rem;
+    }
+  }
+
+  &__source {
+    color: var(--pale-blue-400);
+  }
+
+  &__link {
+    text-decoration: underline;
+    color: currentColor;
+
+    img {
+      display: inline-block;
+      padding-left: 0.5rem;
+      transform: translateY(25%);
+    }
+  }
+}

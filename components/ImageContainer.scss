@@ -5,13 +5,14 @@
   display: grid;
   place-items: center;
   height: var(--container-height);
+  margin-top: 3vw;
 
   @media only screen and (min-width: 48em) {
     --container-height: 28.75rem;
   }
 
   @media only screen and (min-width: 64em) {
-    --container-height: 41.625rem;
+    --container-height: 36.625rem;
   }
 
   &__planet {

@@ -78,6 +78,7 @@ select {
 
 :root {
   --white: hsl(0, 0%, 100%);
+  --gray-200: hsl(0, 0%, 95%);
   --gray-400: hsl(0, 0%, 75%);
   --gray-800: hsl(0, 0%, 20%);
 
@@ -156,6 +157,7 @@ a {
 
   @media only screen and (min-width: 48em) {
     width: min(100% - 5rem, 69.375rem);
+    gap: 2em;
     grid-template-columns: 3fr 2fr;
     grid-template-areas:
       "img img"
@@ -164,14 +166,16 @@ a {
   }
 
   @media only screen and (min-width: 64em) {
-    // flex-grow: 1;
-    gap: 3rem;
+    gap: 3rem 8rem;
+    grid-template-rows: 2fr 1fr auto;
     grid-template-areas:
       "img info"
       "img tabs"
       "stats stats";
   }
 }
+
+// Grid Areas
 
 .image-container {
   grid-area: img;
@@ -181,6 +185,14 @@ a {
 
   @media only screen and (max-width: 47.9375em) {
     margin-inline: -1.5rem;
+  }
+
+  @media only screen and (min-width: 48em) {
+    align-self: center;
+  }
+
+  @media only screen and (min-width: 64em) {
+    align-self: start;
   }
 }
 .info {

@@ -4,6 +4,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import NavBar from "../components/NavBar";
 import ImageContainer from "../components/ImageContainer";
 import Tabs from "../components/Tabs";
+import Info from "../components/Info";
 import Stats from "../components/Stats";
 
 import planetData from "./data.json";
@@ -70,27 +71,8 @@ function App() {
         {data ? (
           <>
             <ImageContainer tab={tab} data={data} />
+            <Info tab={tab} data={data} />
             <Tabs tab={tab} setTab={setTab} planet={data.name.toLowerCase()} />
-
-            <div className="info">
-              <h1>{data.name}</h1>
-              <p>{data[tab]?.content}</p>
-              <p>
-                Source:{" "}
-                <a
-                  href={data[tab]?.source}
-                  target="_blank"
-                  style={{
-                    display: "inline-flex",
-                    alignItems: "center",
-                    gap: ".5em"
-                  }}
-                >
-                  Wikipedia <img src="assets/icon-source.svg" alt="" />
-                </a>
-              </p>
-            </div>
-
             <Stats data={data} />
           </>
         ) : (
