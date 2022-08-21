@@ -12,10 +12,6 @@ export default function ImageContainer({ data, tab }) {
   }, [data]);
 
   useEffect(() => {
-    setPlanetIn(true);
-  }, [planetIn]);
-
-  useEffect(() => {
     setShowBubble(tab === "geology");
   }, [tab]);
 
@@ -27,6 +23,7 @@ export default function ImageContainer({ data, tab }) {
             src={data.images.planet}
             alt={`the planet ${data.name}`}
             className="image-container__planet"
+            onLoad={() => setPlanetIn(true)}
           />
         )}
 
