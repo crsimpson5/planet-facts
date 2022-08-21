@@ -8,7 +8,7 @@ function Tab({ text, type, tab, setTab }) {
       onClick={() => setTab(type)}
       data-type={type}
     >
-      {text}
+      <span className="text">{text}</span>
     </button>
   );
 }

@@ -152,6 +152,7 @@ a {
     "stats";
   grid-template-rows: min-content;
   grid-auto-rows: auto;
+  padding-bottom: 2.5rem;
 
   @media only screen and (min-width: 48em) {
     width: min(100% - 5rem, 69.375rem);
@@ -163,7 +164,7 @@ a {
   }
 
   @media only screen and (min-width: 64em) {
-    flex-grow: 1;
+    // flex-grow: 1;
     gap: 3rem;
     grid-template-areas:
       "img info"
