@@ -133,16 +133,9 @@ a {
   cursor: pointer;
 }
 
-#root {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
 // Main Grid
 
 .main-grid {
-  flex-grow: 1;
   width: min(100% - 3rem, 69.375rem);
   margin-inline: auto;
   display: grid;
