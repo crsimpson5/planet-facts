@@ -40,14 +40,12 @@ export default function ImageContainer({ data, tab }) {
           timeout={300}
           classNames="image-container__bubble"
         >
-          {tab === "geology" ? (
+          {tab === "geology" && (
             <img
               src={data.images.geology}
               alt={`the surface of ${data.name}`}
               className="image-container__bubble"
             />
-          ) : (
-            <></>
           )}
         </CSSTransition>
       </div>
