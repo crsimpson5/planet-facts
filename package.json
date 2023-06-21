@@ -13,7 +13,6 @@
   "dependencies": {
     "animated-number-react": "0.1.1",
     "classnames": "^2.3.1",
-    "number": "^0.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.3.0",
