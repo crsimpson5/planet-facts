@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 
-import NavBar from "../components/NavBar";
-import ImageContainer from "../components/ImageContainer";
-import Tabs from "../components/Tabs";
-import Info from "../components/Info";
-import Stats from "../components/Stats";
+import NavBar from "../components/Navbar/NavBar";
+import ImageContainer from "../components/ImageContainer/ImageContainer";
+import Tabs from "../components/Tabs/Tabs";
+import Info from "../components/Info/Info";
+import Stats from "../components/Stats/Stats";
 
 import planetData from "./data.json";
 const planets = planetData.reduce((a, c) => {
